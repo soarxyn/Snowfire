@@ -1,0 +1,25 @@
+[package]
+name = "snowfire"
+version = "0.1.0"
+authors = ["Edu Renesto <edure95@gmail.com>", "Gabriel Macias <seu@emai.com>"]
+edition = "2018"
+
+[features]
+default = ["vulkan", "opengl"]
+vulkan = ["vulkano"]
+opengl = ["gl"]
+
+[dependencies]
+glutin = "0.24.0"
+specs = "0.16.1"
+nalgebra-glm = "0.6.0"
+image = "0.23.2"
+imgui = "0.3.0"
+
+# For OpenGL
+gl = { version = "0.14.0", optional = true }
+
+# For Vulkan
+vulkano = { version = "0.18.0", optional = true }
+vulkano-win = { version = "0.18.0", optional = true }
+vulkano-shaders = { version = "0.18.0", optional = true }
